@@ -1,2 +1,2 @@
 101-odd
-ls -1 | paste -- | cut -f1
+ls -1 | paste - - | cut -f1
