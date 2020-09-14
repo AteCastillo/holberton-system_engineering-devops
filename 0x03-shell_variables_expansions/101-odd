@@ -1,2 +1,2 @@
-101-odd
+#!/bin/bash
 ls -1 | paste - - | cut -f1
