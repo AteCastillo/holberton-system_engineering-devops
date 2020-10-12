@@ -1,2 +1,3 @@
 #!/bin/bash
 sort | tr -d 'cC'
+tr -d 'cC'
