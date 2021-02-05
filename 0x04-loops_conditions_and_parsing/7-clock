@@ -6,7 +6,7 @@ for minutes in {0..59}
     do
     if [ $minutes -eq 0 ]
 	then
-	echo "hour: $hours"
+	echo "Hour: $hours"
     else
 	echo "$minutes"
 	fi
