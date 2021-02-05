@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#fizzbuzz
+for x in {1..100}
+do
+    if [ $((x%15)) -eq 0 ]
+    then
+        echo "Fizzbuzz"
+    elif [ $((x%3)) -eq 0 ]
+    then
+        echo "Fizz"
+    elif [ $((x%5)) -eq 0 ]
+    then
+        echo "Buzz"
+    else
+        echo "$x"
+    fi
+done
