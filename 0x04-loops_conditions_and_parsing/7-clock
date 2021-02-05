@@ -2,13 +2,10 @@
 # clock with for loop
 for hours in {0..12}
 do
-for minutes in {0..59}
-    do
-    if [ $minutes -eq 0 ]
-	then
-	echo "Hour: $hours"
-    else
+    echo "Hour: $hours"
+for minutes in {1..59}
+do
 	echo "$minutes"
-	fi
+
     done
 done
