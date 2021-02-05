@@ -2,17 +2,16 @@
 # check for files
 
 file_name="holbertonschool"
-
-if [ -e $file_name ]
+if [ -e "$file_name" ]
 then
     echo "holbertonschool file exists"
-        if [ -s $file_name ]
-        then 
+        if [ -s "$file_name" ]
+        then
             echo "holbertonschool file is not empty"
-        else 
+        else
             echo "holbertonschool file is empty"
         fi
-    if [ -f $file_name ]
+    if [ -f "$file_name" ]
     then
         echo "holbertonschool file is a regular file"
     fi
