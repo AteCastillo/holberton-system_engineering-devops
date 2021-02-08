@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# create, message and delete
+
+tmp_file="/var/run/holbertonscript.pid"
+
+echo "$$" > $tmp_file
+trap 'echo "I hate the kill command"; rm $tmp_file; exit' SIGTERM
+trap 'echo "Y U no love me?!"' SIGINT
+trap 'rm $tmp_file; exit' SIGQUIT
+
+while "true"
+do
+    echo "To infinity and beyond"
+    sleep 2
+done

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# indifenitely print and add another message
+# delete
 
 trap 'echo "I am invincible!!!"' SIGTERM
 
