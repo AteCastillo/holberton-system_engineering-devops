@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# script that displays lines without passwd
+
+pgrep bash -l
