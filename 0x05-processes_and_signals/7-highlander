@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# delete
+# stop proccess
 
 trap 'echo "I am invincible!!!"' SIGTERM
 
