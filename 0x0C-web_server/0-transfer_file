@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
-# script that transfers a file from our client to a server:
-if [ [$# -eq 4] ]
-    then
-        scp -o StrictHostKeyChecking=no -i "$4" "$1" "$2"@"$3":
-else
+# Copy a certain file over SCP to my holberton ubuntu server
+# Should take four arguments
+# (Default destination of scp transfer is $HOME if no destination is specified)
+
+if [[ $# -ne 4 ]]
+then
     echo 'Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY'
+else
+    scp -o StrictHostKeyChecking=no -i "$4" "$1" "$3"@"$2":
 fi
