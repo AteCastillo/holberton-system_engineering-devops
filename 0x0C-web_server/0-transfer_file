@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Copy a certain file over SCP to my holberton ubuntu server
 # Should take four arguments
-# (Default destination of scp transfer is $HOME if no destination is specified)
 
 if [[ $# -ne 4 ]]
 then
