@@ -22,9 +22,9 @@ if __name__ == '__main__':
                 name = user.get('name')
         # List with done tasks
         mydone_list = [task for task in json_response
-                    if task.get('completed') is True]
-        #print(mydone_list)
+                       if task.get('completed') is True]
+        # print(mydone_list)
         print("Employee {} is done with tasks({}/{}):".
-            format(name, len(mydone_list), len(json_response)))
+              format(name, len(mydone_list), len(json_response)))
         for task in mydone_list:
             print("\t {}".format(task.get('title')))

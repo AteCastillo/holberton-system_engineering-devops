@@ -55,7 +55,7 @@ if __name__ == '__main__':
             tmp3 = my_dict.get('TASK_COMPLETED').get(goal)
             tmp4 = my_dict.get('TASK_TITLE').get(goal)
             csv_writer.writerow({'USER_ID': tmp1,
-                                'USERNAME': tmp2,
-                                'TASK_COMPLETED': tmp3,
-                                'TASK_TITLE': tmp4})
+                                 'USERNAME': tmp2,
+                                 'TASK_COMPLETED': tmp3,
+                                 'TASK_TITLE': tmp4})
             goal += 1
