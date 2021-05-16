@@ -3,11 +3,14 @@
 returns information about his/her TODO list progress"""
 
 if __name__ == '__main__':
+
     from requests import get
     from sys import argv
+    
+    
 
     employer_id = argv[1]
-    apiurl = "https://jsonplaceholder.typicode.com/"
+    apiurl = "https://jsonplaceholder.typicode.com/users/"
 
     if int(employer_id):
         payload = {'userId': employer_id}
