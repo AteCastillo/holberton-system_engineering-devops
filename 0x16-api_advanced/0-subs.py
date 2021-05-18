@@ -8,7 +8,8 @@ import requests
 
 def number_of_subscribers(subreddit):
     """new"""
-
+    if (type(subreddit) is not str):
+        return(0)
     url = 'https://www.reddit.com'
     url_api = '{}/r/{}/about.json'.format(url, subreddit)
     headers = {'user-agent': 'safari:holberton/0.1.0'}
