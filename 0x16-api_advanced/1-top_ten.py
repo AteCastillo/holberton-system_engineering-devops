@@ -8,8 +8,6 @@ import requests
 
 def top_ten(subreddit):
     """new"""
-    if (type(subreddit) is not str):
-        return(0)
     url = 'https://www.reddit.com'
     url_api = '{}/r/{}/hot.json'.format(url, subreddit)
     headers = {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:88.0)\
@@ -20,4 +18,4 @@ def top_ten(subreddit):
         for i in range(10):
             print(values['data']['children'][i]['data']['title'])
     else:
-        return None
+        print(None)
