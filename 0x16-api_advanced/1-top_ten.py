@@ -4,16 +4,17 @@
 """
 
 import requests
-import json
 
 
 def top_ten(subreddit):
     """new"""
-    if (type(subreddit) is not str):
-        return(0)
-    url_api = ("https://www.reddit.com/r/{}/about.json".format(subreddit))
+    url = 'https://www.reddit.com'
+    url_api = '{}/r/{}/hot.json'.format(url, subreddit)
     headers = {'user-agent': 'safari:holberton/0.1.0'}
     response = requests.get(url_api, headers=headers)
-    if response.status_code is not 200:
-        return(0)
-    return(response.json().get("data").get("subscribers"))
+    values = response.json()
+    if response.status_code == 200:
+        for i in range(10):
+            print(values['data']['children'][i]['data']['title'])
+    else:
+        return None
