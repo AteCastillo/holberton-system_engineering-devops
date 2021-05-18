@@ -9,6 +9,8 @@ import json
 
 def top_ten(subreddit):
     """new"""
+    if (type(subreddit) is not str):
+        return(0)
     url = 'https://www.reddit.com'
     url_api = '{}/r/{}/hot.json'.format(url, subreddit)
     headers = {'user-agent': 'safari:holberton/0.1.0'}
